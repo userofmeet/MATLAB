@@ -1,0 +1,4 @@
+timeToWrite = letter.Time(end)
+letterHeight = range(letter.Y)
+letterWidth = range(letter.X)
+features = table(timeToWrite, letterHeight, letterWidth)
