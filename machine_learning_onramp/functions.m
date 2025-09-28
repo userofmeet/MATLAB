@@ -1,4 +1,5 @@
 function features = extractLetterFeatures(letter)
+
 % Extract features
 timeToWrite = letter.Time(end);
 letterHeight = range(letter.Y);
