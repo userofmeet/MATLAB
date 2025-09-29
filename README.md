@@ -122,3 +122,27 @@ for c = 1:3
     disp(c)
 end
 ```
+
+## Networks & Layers
+``` bash
+net = googlenet            # Load pretrained GoogLeNet
+layerGraph(net)            # Inspect network layers
+```
+
+## Training Info
+``` bash
+info.TrainingHistory       # View training performance
+plot(info.TrainingHistory.Loss)
+```
+
+## Predictions
+``` bash
+scores = minibatchpredict(net,imds)   # Class scores
+[label,score] = classify(net,img)     # Single prediction
+```
+
+## Transfer Learning
+``` bash
+layers = net.Layers;      
+newLayers = [layers(1:end-3); fullyConnectedLayer(5); softmaxLayer; classificationLayer];
+```
